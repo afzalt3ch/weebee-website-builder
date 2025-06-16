@@ -1,0 +1,113 @@
+/* Basic Reset and Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container for the Exported Website Content */
+.website-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Headings and Paragraphs */
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Reset for Exported Canvas Elements */
+.canvas-element {
+  border: none;
+  background: none;
+  position: absolute;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Audio Container & Element Styling */
+.audio-container {
+  /* Override any fixed height from the editor so that audio plays properly */
+  height: auto !important;
+  background: transparent;
+  display: block;
+}
+
+audio.uploaded-audio {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 30px;  /* Ensure controls are visible */
+  margin: 10px 0;
+}
+
+/* Video Element Styling */
+video.uploaded-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+/* Links */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Table Styles for Export --- */
+/* Basic Table */
+table.basic {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+table.basic th,
+table.basic td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Borderless Table */
+table.borderless {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+table.borderless th,
+table.borderless td {
+  border: none;
+  padding: 8px;
+}
+
+/* Definition List Styling */
+dl {
+  margin-bottom: 15px;
+}
+dt {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+dd {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}

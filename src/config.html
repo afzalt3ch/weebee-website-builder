@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WeeBee - Setup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="config-container">
+        <h1>Website Setup</h1>
+        
+        <div class="form-group">
+            <label for="websiteName">Website Name:</label>
+            <input type="text" id="websiteName" placeholder="My Awesome Site" required>
+        </div>
+
+        <div class="form-group">
+            <label for="websiteWidth">Page Width (px):</label>
+            <input type="number" id="websiteWidth" value="1200" min="400" max="3840">
+        </div>
+
+        <div class="button-group">
+            <button id="startEditor" class="btn-primary">Start Editing</button>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+</body>
+</html>

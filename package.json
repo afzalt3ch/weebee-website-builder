@@ -1,0 +1,21 @@
+{
+  "name": "weebee",
+  "version": "1.0.0",
+  "main": "main-process/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.0"
+  },
+  "build": {
+    "appId": "com.weebee.app",
+    "productName": "WeeBee",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  }
+}

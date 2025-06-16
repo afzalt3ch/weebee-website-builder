@@ -1,0 +1,503 @@
+/* ========================
+   Global Reset & Typography
+======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  overflow-x: hidden;
+  color: #2c3e50;
+}
+
+/* ========================
+   Config Page Styles (config.html)
+======================== */
+.config-container {
+  max-width: 500px;
+  margin: 5vh auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.config-container h1 {
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #d1d8e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #27496d;
+  box-shadow: 0 0 10px rgba(39, 73, 109, 0.3);
+}
+
+.button-group {
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.4);
+  background: linear-gradient(135deg, #1a5981, #56c3f2);
+}
+
+/* ========================
+   Editor Page Styles
+======================== */
+
+/* Header with Website Title and Text Formatting Toolbar */
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+  align-self: flex-start;
+}
+
+.header-top h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.toolbar {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Base styles for all format buttons */
+.toolbar .format-btn {
+  background: #f5f6fa; /* Light background for default */
+  border: none;
+  color: #145d68; /* Matching the gradient's lighter blue tone */
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s, color 0.3s;
+}
+
+/* Hover effect */
+.toolbar .format-btn:hover {
+  background: #dfe6e9; /* Slightly darker on hover */
+  color: #76c7d1; /* Lighter blue for hover effect */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Base styles for the toggle button */
+#toggleMode {
+  background-color:#c3cfe2;
+  color: #2981b8; /* Dark text for visibility */
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s, color 0.3s;
+}
+
+/* Hover effect for light mode */
+#toggleMode:hover {
+  background-color: linear-gradient(135deg, #1a5981, #56c3f2); /* Slightly darker on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode for the toggle button */
+#toggleMode.dark-mode {
+  background-color: #005f80; /* Darker version of the initial color */
+  color: #f0f8ff; /* Light text for visibility */
+}
+
+/* Dark mode hover effect */
+#toggleMode.dark-mode:hover {
+  background-color: #004d66; /* Even darker on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Text Size Input */
+#textSizeInput {
+  margin-left: 8px;
+  padding: 0.5rem 0.75rem; /* Same padding as other buttons */
+  border: none;
+  border-radius: 6px;
+  background-color: #f5f6fa; /* Light background for contrast */
+  color: #145d68; /* Matching the gradient's lighter blue tone */
+  text-align: center;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  font-size: 0.9rem; /* Same font size as buttons */
+}
+
+#textSizeInput:focus {
+  background-color: #dfe6e9;
+  box-shadow: 0 0 6px rgba(108, 92, 231, 0.3);
+}
+
+/* Apply Button (OK) */
+#applyTextSize {
+  margin-left: 8px;
+  background: #f5f6fa; /* Light background for contrast */
+  border: none;
+  color: #145d68; /* Matching the gradient's lighter blue tone */
+  padding: 0.5rem 0.75rem; /* Same padding as other buttons */
+  width: 50px; /* Matching the width of other buttons */
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+#applyTextSize:hover {
+  background: #dfe6e9; /* Slightly darker on hover */
+  color: #76c7d1; /* Lighter blue for hover effect */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Font Family Dropdown */
+#fontFamilySelect {
+  width: 120px; /* Matching the width of other buttons */
+  padding: 0.5rem 0.75rem; /* Same padding as buttons */
+  border: none;
+  border-radius: 6px;
+  background-color: #f5f6fa; /* Matching button background */
+  color: #145d68; /* Matching the gradient's lighter blue tone */
+  cursor: pointer;
+  font-size: 1rem; /* Same font size as buttons */
+  transition: background 0.3s, box-shadow 0.2s;
+}
+
+#fontFamilySelect:focus {
+  background-color: #dfe6e9;
+  color: #76c7d1; /* Lighter blue for hover effect */
+}
+
+
+
+/* Manual Page-Length Controls (fixed at top-right) */
+.page-length-controls {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 2000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.page-length-controls button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.page-length-controls button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #1a5981, #56c3f2);
+}
+
+/* Sidebar for Draggable Elements */
+.sidebar {
+  position: fixed;
+  top: 130px;
+  bottom: 20px;
+  left: 20px;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  box-sizing: border-box;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Ensures vertical alignment of elements */
+  align-items: center; /* Centers items horizontally */
+}
+
+/* Sidebar hover effect to make it more interactive */
+.sidebar:hover {
+  box-shadow: 6px 0 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Draggable Elements */
+.element {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background: white;
+  border: 2px dashed #d1d8e0;
+  border-radius: 6px;
+  cursor: move;
+  text-align: center;
+  transition: all 0.3s;
+  user-select: none;
+  width: 120px;  /* Same size */
+  height: 40px;  /* Same size */
+  display: flex;
+  align-items: center;   /* Vertically centers text inside */
+  justify-content: center; /* Horizontally centers text inside */
+  color: #0a3d62;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Adds subtle shadow */
+}
+
+/* Hover effect for draggable elements */
+.element:hover {
+  color: #1e5a88;
+  transform: translateX(5px);
+  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.2);
+  border: 2px dashed #27496d;
+}
+
+
+/* Editor Container for the Drop Area */
+.editor-container {
+  display: flex;
+  height: calc(100vh - 120px);
+  overflow-x: auto;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Canvas (Drop Area) */
+#canvas {
+  position: relative;
+  width: 1200px;
+  max-width: 100%;
+  margin: 20px auto;
+  background: white;
+  height: auto;
+  overflow: visible;
+  border-radius: 6px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Canvas Dragover Effect */
+.canvas.dragover {
+  background: rgba(108, 92, 231, 0.1);
+  border: 2px dashed #1e5a88;
+}
+
+.canvas::after {
+  content: "Drop here to add element";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #1e5a88;
+  font-size: 1.2em;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.canvas.dragover::after {
+  opacity: 1;
+}
+
+/* Canvas Element Styling */
+.canvas-element {
+  margin: 1rem;
+  padding: 0;
+  border: 2px solid #d1d8e0;
+  border-radius: 6px;
+  position: absolute;
+  background: white;
+  cursor: move;
+  transition: box-shadow 0.3s, transform 0.3s;
+  user-select: none;
+  min-width: 100px;
+  min-height: 40px;
+}
+
+.canvas-element.dragging {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  cursor: grabbing;
+}
+
+.canvas-element h2,
+.canvas-element p {
+  display: inline-block;
+  min-width: 100px;
+  width: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  padding: 5px;
+}
+
+/* Export Button Styling */
+.export-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.export-button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #1a5981, #56c3f2);
+}
+
+.resize-handle {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 10px;
+  height: 10px;
+  background: #00bfff;
+  cursor: nwse-resize;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.resize-handle:hover {
+  transform: scale(1.5);
+}
+
+/* Page Manager Styles */
+#pageManager {
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.9); /* Same background as the sidebar */
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Matching box shadow */
+  text-align: center;
+}
+
+#pageManager h3 {
+  color: #2c3e50; /* Same color as the website title */
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#pageList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#pageList li {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  background: #f5f6fa; /* Light background similar to buttons */
+  border-radius: 6px;
+  color: #4ca1af; /* Same as toolbar button text */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+#pageList li:hover {
+  background: #dfe6e9; /* Slightly darker background on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add Page Button */
+#addPageBtn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa); /* Gradient matching other buttons */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+#addPageBtn:hover {
+  background: linear-gradient(135deg, #1a5981, #56c3f2); /* Slightly darker on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Resize Handles */
+.text-resize-handle {
+  position: absolute;
+  right: -5px;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: #00bfff;
+  cursor: col-resize;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.canvas-element:hover .text-resize-handle {
+  opacity: 1;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeeBee Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header with Website Title and Text Formatting Toolbar -->
+  <div class="header">
+    <div class="header-top">
+      <h2 id="websiteTitle">My Website</h2>
+    </div>
+    <div class="toolbar">
+      <button class="format-btn" data-command="bold"><b>B</b></button>
+      <button class="format-btn" data-command="italic"><i>I</i></button>
+      <button class="format-btn" data-command="underline"><u>U</u></button>
+      <button class="format-btn" data-command="strikeThrough"><s>S</s></button>
+      <button class="format-btn" data-command="subscript">X<sub>2</sub></button>
+      <button class="format-btn" data-command="superscript">X<sup>2</sup></button>
+      <button class="format-btn" data-command="hiliteColor" data-value="yellow">Highlight</button>
+      
+      <!-- Text Size Input and OK Button -->
+      <div class="text-size-container">
+        <label for="textSizeInput">Text Size:</label>
+        <input id="textSizeInput" type="number" min="1" value="16" style="width:70px; margin-left:5px;" />
+        <button id="applyTextSize" class="format-btn">OK</button>
+      </div>
+      
+      <!-- Font Color Button and hidden color input -->
+      <button id="fontColorBtn" class="format-btn">Font Color</button>
+      <input type="color" id="colorPickerInput" style="display:none;" />
+      
+      <!-- Background Color Button and hidden color input -->
+      <button id="bgColorBtn" class="format-btn">Background Color</button>
+      <input type="color" id="bgColorPicker" style="display:none;" />
+      
+      <!-- Font Family Dropdown -->
+      <select id="fontFamilySelect" class="format-select">
+        <option value="Arial" selected>Arial</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Palatino">Palatino</option>
+        <option value="Garamond">Garamond</option>
+        <option value="Comic Sans MS">Comic Sans MS</option>
+        <option value="Impact">Impact</option>
+        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Trebuchet MS">Trebuchet MS</option>
+        <option value="Arial Black">Arial Black</option>
+        <option value="Brush Script MT">Brush Script MT</option>
+        <option value="Calibri">Calibri</option>
+        <option value="Cambria">Cambria</option>
+        <option value="Consolas">Consolas</option>
+        <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+        <option value="Lucida Console">Lucida Console</option>
+      </select>
+      
+      <!-- Interaction Mode Toggle Button -->
+      <button id="toggleMode" class="format-btn">Switch to Select Mode</button>
+    </div>
+  </div>
+  
+  <!-- Manual Page-Length Controls (fixed at top-right) -->
+  <div class="page-length-controls">
+    <button id="increasePageLength">+</button>
+    <button id="decreasePageLength">–</button>
+  </div>
+  
+  <!-- Sidebar with draggable elements and page management -->
+  <div class="sidebar">
+    <div class="element" draggable="true" data-type="heading">Header</div>
+    <div class="element" draggable="true" data-type="paragraph">Paragraph</div>
+    <div class="element" draggable="true" data-type="image">Image</div>
+    <div class="element" draggable="true" data-type="video">Video</div>
+    <div class="element" draggable="true" data-type="audio">Audio</div>
+    <div class="element" draggable="true" data-type="hr">Horizontal Line</div>
+    <div class="element" draggable="true" data-type="ul">Unordered List</div>
+    <div class="element" draggable="true" data-type="ol">Ordered List</div>
+    <div class="element" draggable="true" data-type="dl">Definition List</div>
+    <div class="element" draggable="true" data-type="table">Table</div>
+    <div class="element" draggable="true" data-type="id">ID Tag</div>
+    <div class="element" draggable="true" data-type="goto">Goto Tag</div>
+    <div class="element" draggable="true" data-type="ext">External Link</div>
+    <!-- New Frame element -->
+    <div class="element" draggable="true" data-type="frame">Frame</div>
+    
+    <!-- Page Management Section -->
+    <div id="pageManager">
+      <h3>Pages</h3>
+      <ul id="pageList"></ul>
+      <button id="addPageBtn">+ Add Page</button>
+    </div>
+  </div>
+  
+  <!-- Editor Container (scrollable area) wrapping the canvas (drop area) -->
+  <div class="editor-container">
+    <div id="canvas"></div>
+  </div>
+  
+  <!-- Export Button -->
+  <button id="exportBtn" class="export-button">Export Website</button>
+  
+  <script src="script.js"></script>
+</body>
+</html>
