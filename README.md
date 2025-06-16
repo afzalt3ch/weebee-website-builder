@@ -43,13 +43,21 @@
 
 ---
 
-## 🎥 Demo Videos
+## 🎥 Demo GIFs
 
-> Watch how websites are built completely using WeeBee!
+> A quick look into the app and websites built using WeeBee
 
-### 🔗 [F-Droid Clone Demo](https://github.com/afzalt3ch/weebee-website-builder/blob/main/Sites/F-Droid/fdroid_rec.mp4)
+### ▶️ App Launch and Basic Demo
 
-### 🔗 [Fitgirl Clone Demo](https://github.com/afzalt3ch/weebee-website-builder/blob/main/Sites/fitgirl/fitgirl_rec.mp4)
+![WeeBee Demo](https://github.com/afzalt3ch/weebee-website-builder/blob/main/screenshots/weebee_demo.gif?raw=true)
+
+### 🧩 F-Droid Clone Built with WeeBee
+
+![F-Droid Clone](https://github.com/afzalt3ch/weebee-website-builder/blob/main/Sites/F-Droid/fdroid_rec.gif?raw=true)
+
+### 🔥 Fitgirl (Firefox) Clone Built with WeeBee
+
+![Fitgirl Clone](https://github.com/afzalt3ch/weebee-website-builder/blob/main/Sites/fitgirl/fitgirl_rec.gif?raw=true)
 
 ---
 
@@ -60,7 +68,7 @@ weebee-website-builder/
 ├── Sites/               # Example websites built with WeeBee
 ├── main-process/        # Electron main & preload scripts
 ├── src/                 # UI files (index.html, script.js, style.css)
-├── screenshots/         # Demo videos (.mp4)
+├── screenshots/         # Demo videos (.gif)
 ├── package.json         # Electron setup & config
 ├── requirements.txt     # Dependency reference
 └── README.md
