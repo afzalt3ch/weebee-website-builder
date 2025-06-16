@@ -55,15 +55,16 @@
 
 ## 📂 Folder Structure
 
+```
 weebee-website-builder/
-├── Sites/ # Example websites built with WeeBee
-├── main-process/ # Electron main & preload scripts
-├── src/ # UI files (index.html, script.js, style.css)
-├── screenshots/ # Demo videos (.mp4)
-├── package.json # Electron setup & config
-├── requirements.txt # Dependency reference
+├── Sites/               # Example websites built with WeeBee
+├── main-process/        # Electron main & preload scripts
+├── src/                 # UI files (index.html, script.js, style.css)
+├── screenshots/         # Demo videos (.mp4)
+├── package.json         # Electron setup & config
+├── requirements.txt     # Dependency reference
 └── README.md
-
+```
 
 ---
 
@@ -83,10 +84,39 @@ weebee-website-builder/
 git clone https://github.com/afzalt3ch/weebee-website-builder.git
 cd weebee-website-builder
 npm install
+```
 
+### Run the app:
+
+```bash
 npm start
+```
 
-📜 License
-This project is licensed under the MIT License.
+### Build for production (Windows):
 
-<p align="center">Made with ❤️ by <strong>Afzal T3ch</strong></p> ```
+```bash
+npm run dist
+```
+
+> Output will be in the `dist/` folder.
+
+---
+
+## 📦 Requirements
+
+See [`requirements.txt`](https://github.com/afzalt3ch/weebee-website-builder/blob/main/requirements.txt)
+
+```txt
+electron
+electron-builder
+```
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+<p align="center">Made with ❤️ by <strong>Afzal T3ch</strong></p>
