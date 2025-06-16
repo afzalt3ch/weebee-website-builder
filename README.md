@@ -35,7 +35,7 @@
 
 - 💾 **Export Options**:
   - Export the entire design as static HTML and CSS
-  - Saved inside `code_text/` directory
+  - Saved inside selected folder directory
 
 - ⚙️ **Cross-Platform Desktop App**:
   - Built using Electron
