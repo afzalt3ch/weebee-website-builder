@@ -55,7 +55,7 @@
 
 ![F-Droid Clone](https://github.com/afzalt3ch/weebee-website-builder/blob/main/Sites/F-Droid/fdroid_rec.gif?raw=true)
 
-### 🔥 Fitgirl (Firefox) Clone Built with WeeBee
+### 🔥 Fitgirl Clone Built with WeeBee
 
 ![Fitgirl Clone](https://github.com/afzalt3ch/weebee-website-builder/blob/main/Sites/fitgirl/fitgirl_rec.gif?raw=true)
 
